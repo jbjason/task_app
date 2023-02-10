@@ -16,16 +16,16 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             // appBar
-            AppBar(
-              elevation: 0,
-              backgroundColor: Colors.white,
-              leading: _appBarIcon(CupertinoIcons.camera_fill),
-              centerTitle: true,
-              title: const Text(
-                'JB Jason',
-                style: TextStyle(color: Colors.black, fontSize: 20),
-              ),
-              actions: [_appBarIcon(Icons.notifications_on)],
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _appBarIcon(CupertinoIcons.camera_fill),
+                const Text(
+                  'EXPLORE',
+                  style: TextStyle(color: Colors.black, fontSize: 20),
+                ),
+                _appBarIcon(Icons.notifications_on),
+              ],
             ),
             const SizedBox(height: 5),
             // productsList

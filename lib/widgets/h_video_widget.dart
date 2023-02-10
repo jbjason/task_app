@@ -25,11 +25,12 @@ class HVideoWidget extends StatelessWidget {
       );
 
   Widget _playPauseButton() => GestureDetector(
-        onTap: () => controller!.value.isPlaying
-            ? controller!.pause()
-            : controller!.play(),
+      onTap: () => controller!.value.isPlaying
+          ? controller!.pause()
+          : controller!.play(),
+      child: Center(
         child: controller!.value.isPlaying
             ? const Icon(Icons.pause, size: 38, color: Colors.white)
             : const Icon(Icons.play_circle, size: 38, color: Colors.white),
-      );
+      ));
 }

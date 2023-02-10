@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Task App',
+      debugShowCheckedModeBanner: false,
       home: MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (ctx) => Products()),

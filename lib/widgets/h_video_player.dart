@@ -15,7 +15,7 @@ class _HVideoPlayerState extends State<HVideoPlayer> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(widget.videoUrl)
+    _controller = VideoPlayerController.asset('assets/video.mp4')
       ..addListener(() => setState(() {}))
       ..setLooping(true)
       ..initialize().then((_) => _controller!.play());
@@ -41,7 +41,7 @@ class _HVideoPlayerState extends State<HVideoPlayer> {
     if (_controller != null && _controller!.value.isInitialized) {
       return CircleAvatar(
         backgroundColor: Colors.black26,
-        radius: 55,
+        radius: 20,
         child: IconButton(
           icon: Icon(isMute ? Icons.volume_mute : Icons.volume_up,
               color: Colors.white),
