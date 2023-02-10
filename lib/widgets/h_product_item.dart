@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:task_app/model/product.dart';
-import 'package:task_app/widgets/video_details.dart';
+import 'package:task_app/widgets/h_video_details.dart';
+import 'package:task_app/widgets/h_video_player.dart';
 
-class ProductItem extends StatelessWidget {
-  const ProductItem({super.key, required this.product});
+class HProductItem extends StatelessWidget {
+  const HProductItem({super.key, required this.product});
   final Product product;
 
   @override
@@ -15,7 +16,7 @@ class ProductItem extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: const Color(0xFFDBFFEE),
-        borderRadius: BorderRadius.circular(40),
+        borderRadius: BorderRadius.circular(30),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -39,17 +40,14 @@ class ProductItem extends StatelessWidget {
               ),
               child: Stack(
                 children: [
-                  // video
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(30),
-                    child: Image.network(product.videoUrl, fit: BoxFit.cover),
-                  ),
+                  // video player
+                  HVideoPlayer(videoUrl: product.videoUrl),
                   // bottom details container
                   const Positioned(
                     bottom: 0,
                     left: 0,
                     right: 0,
-                    child: VideoDetails(),
+                    child: HVideoDetails(),
                   ),
                 ],
               ),

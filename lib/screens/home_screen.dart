@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task_app/providers/products.dart';
-import 'package:task_app/widgets/product_item.dart';
+import 'package:task_app/widgets/h_product_item.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,6 +17,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             // appBar
             AppBar(
+              elevation: 0,
               backgroundColor: Colors.white,
               leading: _appBarIcon(CupertinoIcons.camera_fill),
               centerTitle: true,
@@ -32,7 +33,7 @@ class HomeScreen extends StatelessWidget {
               child: ListView.separated(
                 itemCount: items.length,
                 separatorBuilder: (_, __) => const SizedBox(height: 10),
-                itemBuilder: (context, i) => ProductItem(product: items[i]),
+                itemBuilder: (context, i) => HProductItem(product: items[i]),
               ),
             ),
           ],
@@ -41,15 +42,14 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _appBarIcon(IconData icon) => SizedBox(
+  Widget _appBarIcon(IconData icon) => Container(
         width: 44,
         height: 44,
-        child: Container(
-          decoration: const BoxDecoration(
-            shape: BoxShape.circle,
-            color: Color(0xFFE6EEFA),
-          ),
-          child: Icon(icon, color: Colors.black),
+        padding: const EdgeInsets.all(10),
+        decoration: const BoxDecoration(
+          shape: BoxShape.circle,
+          color: Color(0xFFE6EEFA),
         ),
+        child: Icon(icon, color: Colors.black),
       );
 }

@@ -2,8 +2,8 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class VideoDetails extends StatelessWidget {
-  const VideoDetails({super.key});
+class HVideoDetails extends StatelessWidget {
+  const HVideoDetails({super.key});
 
   @override
   Widget build(BuildContext context) {

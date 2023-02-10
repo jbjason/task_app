@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 Future<List<Product>> fetchProductsAPI() async {
   final url = Uri.parse(
-      "https://shop-2-5c421-default-rtdb.asia-southeast1.firebasedatabase.app/products.json");
+      "https://hajjmanagment.online/api/external/atab/m360ict/get/video/app/test");
   final List<Product> fetchList = [];
   try {
     final response = await http.get(url);
