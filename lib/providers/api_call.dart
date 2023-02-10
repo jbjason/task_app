@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:task_app/model/product.dart';
 import 'package:http/http.dart' as http;
 
@@ -33,7 +34,6 @@ Future<List<Product>> fetchProductsAPI() async {
     }
     return fetchList;
   } catch (e) {
-    print('fetch prb $e');
-    return fetchList;
+    throw HttpException(e.toString());
   }
 }
