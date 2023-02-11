@@ -10,11 +10,11 @@ class HVideoDetails extends StatelessWidget {
     return ClipRRect(
       borderRadius: const BorderRadius.vertical(bottom: Radius.circular(30)),
       child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
+        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Container(
           height: 47,
           padding: const EdgeInsets.symmetric(horizontal: 14),
-          color: Colors.black38,
+          color: Colors.black26,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
