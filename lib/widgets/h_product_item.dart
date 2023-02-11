@@ -27,8 +27,10 @@ class HProductItem extends StatelessWidget {
             style: const TextStyle(fontSize: 15, color: Colors.black),
           ),
           // date
-          Text(date,
-              style: const TextStyle(fontSize: 15, color: Color(0xFF6C7A9C))),
+          Text(
+            date,
+            style: const TextStyle(fontSize: 15, color: Color(0xFF6C7A9C)),
+          ),
           const SizedBox(height: 10),
           // videoPlayer
           Expanded(

@@ -15,11 +15,9 @@ Future<List<Product>> fetchProductsAPI() async {
       (extractedData['data'] as List).map((json) {
         fetchList.add(Product.fromJson(json));
       }).toList();
-    } else {
-      throw const HttpException('Error Occurs while Loading');
     }
   } catch (e) {
-    throw HttpException(e.toString());
+    throw const HttpException('Error Occurs while Loading');
   }
   return fetchList;
 }
