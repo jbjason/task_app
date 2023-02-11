@@ -1,23 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/model/product.dart';
-import 'package:task_app/providers/api_call.dart';
+import 'package:task_app/providers/api_calls.dart';
 
 class Products extends ChangeNotifier {
   final List<Product> _items = [
     Product(
       id: '1',
       caption: 'Entertainment',
-      // videoUrl: "https://source.unsplash.com/random?sig=${1}",
       videoUrl:
           "https://hajjmanagment.online/get/video/others/1675227619616-610848884.mp4",
-      date: DateTime.now(),
-    ),
-    Product(
-      id: '2',
-      caption: 'Entertainment2',
-      videoUrl:
-          "https://hajjmanagment.online/get/video/others/1675227619616-610848884.mp4",
-      date: DateTime.now().subtract(const Duration(hours: 4)),
+      createdAt: DateTime.now(),
     ),
   ];
 

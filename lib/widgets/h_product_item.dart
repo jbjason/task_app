@@ -10,7 +10,7 @@ class HProductItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final date = DateFormat('h:mm a').format(product.date);
+    final date = DateFormat('h:mm a').format(product.createdAt);
     return Container(
       height: 345,
       padding: const EdgeInsets.all(10),

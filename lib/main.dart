@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Task App',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
       home: MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (ctx) => Products()),
