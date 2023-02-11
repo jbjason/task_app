@@ -29,7 +29,6 @@ class HomeScreen extends StatelessWidget {
                 _appBarIcon(Icons.notifications_on),
               ],
             ),
-            const SizedBox(height: 5),
             // productsList
             const Expanded(child: HBody()),
           ],

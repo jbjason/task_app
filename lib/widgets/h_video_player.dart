@@ -15,7 +15,7 @@ class _HVideoPlayerState extends State<HVideoPlayer> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset('assets/video.mp4')
+    _controller = VideoPlayerController.network(widget.videoUrl)
       ..addListener(() => setState(() {}))
       ..setLooping(true)
       ..initialize().then((_) => _controller!.play());

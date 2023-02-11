@@ -13,7 +13,7 @@ class HProductItem extends StatelessWidget {
     final date = DateFormat('h:mm a').format(product.createdAt);
     return Container(
       height: 345,
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       decoration: BoxDecoration(
         color: const Color(0xFFDBFFEE),
         borderRadius: BorderRadius.circular(30),
@@ -32,25 +32,18 @@ class HProductItem extends StatelessWidget {
           const SizedBox(height: 10),
           // videoPlayer
           Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                image: DecorationImage(
-                    image: NetworkImage(product.videoUrl), fit: BoxFit.cover),
-              ),
-              child: Stack(
-                children: [
-                  // video player
-                  HVideoPlayer(videoUrl: product.videoUrl),
-                  // bottom details container
-                  const Positioned(
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    child: HVideoDetails(),
-                  ),
-                ],
-              ),
+            child: Stack(
+              children: [
+                // video player
+                HVideoPlayer(videoUrl: product.videoUrl),
+                // bottom details container
+                const Positioned(
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: HVideoDetails(),
+                ),
+              ],
             ),
           ),
         ],

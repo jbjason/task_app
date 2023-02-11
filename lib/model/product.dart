@@ -11,11 +11,11 @@ class Product {
   final String videoUrl;
   final DateTime createdAt;
 
-  factory Product.fromJson(Map<String, dynamic> json) => Product(
-        id: json["id"],
-        caption: json["caption"],
-        videoUrl: json["video_url"],
-        createdAt: DateTime.parse(json["created_at"]),
+  factory Product.fromJson(dynamic json) => Product(
+        id: json['id'].toString(),
+        caption: json['caption'].toString(),
+        videoUrl: json['video_url'].toString(),
+        createdAt: DateTime.parse(json['created_at'].toString()),
       );
 
   Map<String, dynamic> toJson() => {
